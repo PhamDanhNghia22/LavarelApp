@@ -9,7 +9,8 @@ use App\Models\Product;
 use App\Models\Size;
 use DB;
 use Illuminate\Http\Request;
-use Storage;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Str;
 use Validator;
 
@@ -37,7 +38,7 @@ class ProductController extends Controller
     public function Store(Request $request)
     {
         $data = $request->all();
-        $validator = Validator::make(
+        $validator = FacadesValidator::make(
             $data,
             [
                 'name' => 'required',

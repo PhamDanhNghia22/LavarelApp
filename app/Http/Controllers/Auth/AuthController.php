@@ -9,7 +9,8 @@ use Hash;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Validator;
+use Illuminate\Support\Facades\Validator;
+// use Validator;
 
 
 class AuthController extends Controller
